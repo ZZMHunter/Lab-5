@@ -10,6 +10,9 @@
 #include <iostream>
 //part a
 bool isDivisibleBy(int a, int b){
+    if (b == 0){
+        return false;
+    }
     if (a%b == 0){
         return true;
     }else{
@@ -84,7 +87,7 @@ int main(){
     std::cout << "5 is divisible by 3: " << isDivisibleBy(5,3) << std::endl;
     std::cout << "7 is divisible by 7: " << isDivisibleBy(7,7) << std::endl;
     std::cout << "6 is divisible by 3: " << isDivisibleBy(6,3) << std::endl;
-    std::cout << "5 is divisible by 0: " << isDivisibleBy(5,3) << std::endl;
+    std::cout << "5 is divisible by 0: " << isDivisibleBy(5,0) << std::endl;
     std::cout << "0 is divisible by 3: " << isDivisibleBy(0,3) << std::endl;
     std::cout << "Test for isPrime() function (1 is true, 0 is false):" << std::endl; 
     std::cout << "Is 1 prime: " << isPrime(1) << std::endl;
