@@ -40,7 +40,7 @@ int nextPrime(int a){
             return i;
         }
     }
-    return 0;
+    return -1;
 }
 //part d
 int countPrimes(int a, int b){
@@ -69,7 +69,7 @@ int nextTwinPrime(int a){
             return i;
         }
     }
-    return 0;
+    return -1;
 }
 //part g
 int largestTwinPrime(int a, int b){
@@ -79,7 +79,7 @@ int largestTwinPrime(int a, int b){
             return i;
         }
     }
-    return 0;
+    return -1;
 }
 //test cases
 int main(){
