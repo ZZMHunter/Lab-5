@@ -18,6 +18,7 @@ bool isDivisibleBy(int a, int b){
 }
 //part b
 bool isPrime(int a){
+    //makes sure inputted numbers are greater than 1, because 1 isnt a prime but is skipped by the next for loop
     if (a <= 1){
         return false;
     }
@@ -30,6 +31,7 @@ bool isPrime(int a){
 }
 //part c
 int nextPrime(int a){
+    //skips the current number in case it is a prime itself
     for (int i = a+1; i > a; i ++){
         if (isPrime(i)){
             return i;
@@ -40,6 +42,7 @@ int nextPrime(int a){
 //part d
 int countPrimes(int a, int b){
     int count = 0;
+    //boundaries
     for (int i = a; i <= b; i ++){
         if (isPrime(i)){
             count++;
@@ -49,6 +52,7 @@ int countPrimes(int a, int b){
 }
 //part e
 bool isTwinPrime(int a){
+    //either +2 or -2 and checks that both numbers are prime
     if (isPrime(a) && isPrime(a+2) || isPrime(a) && isPrime(a-2)){
         return true;
     }
@@ -56,6 +60,7 @@ bool isTwinPrime(int a){
 }
 //part f
 int nextTwinPrime(int a){
+    //same idea as in part c
     for (int i = a+1; i > a; i++){
         if (isTwinPrime(i)){
             return i;
@@ -65,6 +70,7 @@ int nextTwinPrime(int a){
 }
 //part g
 int largestTwinPrime(int a, int b){
+    //reverse count to count from greatest to lowest
     for (int i = b; i >= a; i--){
         if (isTwinPrime(i)){
             return i;
